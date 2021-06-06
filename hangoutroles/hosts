@@ -1,11 +1,13 @@
 [common]
-jenkins-master ansible_host=172.31.47.22
-jenkins-slave ansible_host=172.31.32.42
+jenkins-master ansible_host=172.31.87.123  ansible_ssh_private_key_file=/home/ubuntu/hangout-project2/hangoutroles/awskey.pem
+jenkins-slave ansible_host=172.31.94.68 ansible_ssh_private_key_file=/home/ubuntu/hangout-project2/hangoutroles/awskey.pem
 
 [masternode]
-jenkins-master ansible_host=172.31.47.22
+jenkins-master ansible_host=172.31.87.123 ansible_ssh_private_key_file=/home/ubuntu/hangout-project2/hangoutroles/awskey.pem
 
 [dockerhosts]
-docker ansible_host=172.31.47.34
-jenkins-slave ansible_host=172.31.32.42
+docker ansible_host=172.31.81.211 ansible_ssh_private_key_file=/home/ubuntu/hangout-project2/hangoutroles/awskey.pem
+jenkins-slave ansible_host=172.31.94.68 ansible_ssh_private_key_file=/home/ubuntu/hangout-project2/hangoutroles/awskey.pem
 
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
