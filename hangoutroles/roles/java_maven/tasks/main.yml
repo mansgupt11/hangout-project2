@@ -4,6 +4,7 @@
   apt:
     name: "{{java.VERSION}}"
     state: present
+    update_cache: yes
   become: true
 
 - name: Correct the alternatives to change default Java version.
