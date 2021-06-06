@@ -1,0 +1,8 @@
+---
+# vars file for jenkins
+
+
+jenkins:
+  repo_URL: "deb https://pkg.jenkins.io/debian-stable binary/"
+  gpg_key: "https://pkg.jenkins.io/debian-stable/jenkins.io.key"
+

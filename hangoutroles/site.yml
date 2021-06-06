@@ -1,0 +1,14 @@
+- hosts: common
+  roles:
+    - java_maven
+
+- hosts: masternode
+  roles:
+    - jenkins
+
+- hosts: dockerhosts
+  roles:
+    - docker
+    - java_maven
+
+

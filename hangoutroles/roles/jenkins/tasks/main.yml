@@ -1,0 +1,19 @@
+---
+
+- name: Import GPG Key
+  apt_key:
+    url:  "{{jenkins.gpg_key}}"
+    state: present
+  become: true
+
+- name: Ensure the repo is configured for Jenkins.
+  apt_repository:
+    repo: "{{jenkins.repo_URL}}"
+    state: present
+  become: true
+
+- name: ensure jenkins is installed
+  apt: name=jenkins update_cache=yes
+  become: yes
+
+

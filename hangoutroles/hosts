@@ -1,0 +1,11 @@
+[common]
+jenkins-master ansible_host=172.31.47.22
+jenkins-slave ansible_host=172.31.32.42
+
+[masternode]
+jenkins-master ansible_host=172.31.47.22
+
+[dockerhosts]
+docker ansible_host=172.31.47.34
+jenkins-slave ansible_host=172.31.32.42
+

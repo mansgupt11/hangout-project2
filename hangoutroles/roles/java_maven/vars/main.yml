@@ -1,0 +1,10 @@
+---
+# vars file for jenkins
+
+java:
+  VERSION: "openjdk-8-jdk"
+  ALTERNATIVES: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java"
+
+maven:
+  repo_URL: "http://apachemirror.wuchna.com/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz"
+  maven_binaries: "/opt/apache-maven-3.6.3/bin/mvn"
