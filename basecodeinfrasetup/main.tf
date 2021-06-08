@@ -141,13 +141,3 @@ resource "aws_instance" "ec2-vms" {
   }
   }
 
-### EIP mapping to vms
-resource "aws_eip" "eip1" {
-  instance = element(aws_instance.ec2-vms.*.id, count.index)
-  count    = length (aws_instance.ec2-vms)
-  vpc      = true
-   tags = {
-    Name = var.tagvari
-  }
-}
-######################################################################################
